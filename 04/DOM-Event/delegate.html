@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Event Delegate</h2>
+    <ul id="list-container">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Saepe, pariatur non.</li>
+        <li class="item">Porro, delectus recusandae.</li>
+        <li class="item">Nobis, vel doloribus!</li>
+        <li class="item">Optio, quaerat nulla!</li>
+        <li class="item">Sequi, architecto. Vero?</li>
+    </ul>
+
+
+    <script>
+        const items = document.getElementsByClassName('item');
+        for(const item of items){
+            console.log(item);
+            item.addEventListener('click', function(){
+                console.log('remove item');
+                // document.getElementById('list-container').removeChild(item);
+
+                console.log(event.target.parentNode);
+            });
+        }
+    </script>
+</body>
+</html>

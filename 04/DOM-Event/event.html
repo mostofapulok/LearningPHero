@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 25.1 What is Event, different types of event in web -->
+<body>
+
+    <h1 onclick="alert('Nice to meet you')"> Event niye Chickbaji</h1>
+    <button onclick="makeGreen()">Click Me Green</button>
+
+    <!-- <button>Click Me</button> -->
+    <!-- ---------------------------------------------------
+        Even সাধারণত কোন function এর মাধ্যমে কার্যকর করা হয় 
+    এবং event ঘটার আগে ফাংশনটি কার্যকর করা হবে না
+    (যেমন, যখন কোন user একটি button এ click করে)। 
+    -------------------------------------------------------->
+    <button onclick="alert('Mostofa')">Click Me</button> <br>
+    <button onclick="console.log(7)">Click Me</button> <br>
+    
+    <!-- সরাসরি লিখতে পারি রং পরিবর্তন এর জন্য -->
+    <button onclick="document.body.style.backgroundColor='yellow'">Click Me Yellow</button> <br>
+
+    <!-- আবার ফাংশন দিয়ে দিতে পারি -->
+    <button onclick="makeRed()">click me: Red</button>
+    <button onclick="makeGreen()">click me: Green</button>
+
+    <!-- আইডি দিয়ে করতে পারি -->
+    <button id="make-blue">click me: Blue</button>
+<button id="make-black"> click me: black</button>
+
+
+    <script src="events.js"></script>
+    <script>
+      
+    </script>
+
+    
+</body>
+</html>

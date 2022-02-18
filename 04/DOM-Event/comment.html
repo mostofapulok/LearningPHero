@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Add your commet, Please!! </h2>
+    <h4>Your comments</h4>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatem! Rem illum aspernatur repellendus laboriosam quam, quasi itaque. Assumenda, expedita!</p>
+        <p>In doloremque tenetur perferendis itaque modi vitae repellat nostrum aliquam. Veritatis perferendis quis, qui placeat debitis laudantium! Quam, quod dicta.</p>
+        <p>Aliquid quas repellat, illo recusandae quia laudantium praesentium ipsam, voluptatem nam aliquam commodi mollitia porro ut eveniet magnam assumenda accusamus?</p>
+    </div>
+
+    <div>
+        <p>Add your Comment please.......</p>
+        <textarea name="" id="new-comment" cols="30" rows="10"></textarea>
+        <br>
+        <button id="submit-comment">Post</button>
+    </div>
+
+<script>
+    document.getElementById('submit-comment').addEventListener('click', function(){
+        const newCommnet = document.getElementById('new-comment');
+
+        const newP = document.createElement('p');
+        newP.innerText = newCommnet.value;
+
+        const child = document.getElementById('comment-container');
+        child.appendChild(newP);
+
+        newCommnet.value = "";
+    })
+
+
+
+
+    //     // 1. 
+    //     document.getElementById('submit-comment').addEventListener('click', function(){
+    //        // console.log("clicked");
+
+    //       // 2. 
+    //        const newCommnet = document.getElementById('new-comment');
+    //        //console.log(newCommnet);
+    //        //console.log(newCommnet.value);
+
+    //        // 3.
+    //        const newParagrahp = document.createElement('p');
+    //        //console.log(newParagrahp);
+    //        newParagrahp.innerText = newCommnet.value;
+    //        //console.log(newParagrahp.innerText);
+
+    //        // 4. child
+    //         const child = document.getElementById('comment-container').appendChild(newParagrahp);
+    //         //child.appendChild(newParagrahp);
+    //         //child.appendChild(newParagrahp);
+
+    //         // 5.
+    //         newCommnet.value = "";
+
+    //     })
+     </script>
+
+
+
+<!-- -------------------------------------------
+    <script>
+        // 1. Add button event handler
+        document.getElementById('submit-comment').addEventListener('click', function(){
+                    //console.log('Mostofa');----------
+
+        // 2. get user comment
+            const commentBox = document.getElementById('new-comment');
+                    //console.log(commentBox.value);------
+
+        // 3. create comment paragraph
+            const nweCommnet = document.createElement('p');
+            nweCommnet.innerText = commentBox.value;
+
+        // 4. Append the Comment
+            const commentContainer = document.getElementById('comment-container');
+            commentContainer.appendChild(nweCommnet);
+
+        // 5. clean the comment box
+            commentBox.value = "";
+
+        })
+
+    </script> 
+----------------------------------------------------->
+    </body>
+</html>

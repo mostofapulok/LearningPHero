@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="clicking-method"></p>
+    <input id="name-field" type="text">
+    <button id="update-name">update</button>
+
+    <button onclick="handleJustFunctionClick()">Just function</button>
+    <button onclick="handleJust()"> direct add event listener</button>
+    <button id="handleJust"> direct add event listener</button>
+    
+    <script>
+        // using function
+        function handleJustFunctionClick(){
+            document.body.style.backgroundColor = 'red';
+
+            const clickingMethod = document.getElementById('clicking-method');
+            clickingMethod.innerText = 'Set by using function';
+
+            const clicking = document.getElementById('clicking-method');
+            clicking.innerText = 'Set by using';
+        }
+
+        function handleJust(){
+            document.body.style.backgroundColor = 'white';
+            const clickingMethod = document.getElementById('clicking-method');
+            clickingMethod.innerText = '';
+
+
+        }
+
+        // direct
+        document.getElementById('handleJust').addEventListener('click', function(){
+            const click = document.getElementById('clicking-method');
+            click.innerText = 'nice to meeet o=you';
+            // click.onclick = function (){
+            // document.body.style.backgroundColor = 'black';}
+        })
+
+        // direct 
+        document.getElementById('update-name').addEventListener('click',function(){
+            const nameField = document.getElementById('name-field');
+            const p = document.getElementById('clicking-method');
+            p.innerText = nameField.value;
+            nameField.value = '';
+            console.log(nameField.value);
+        })
+
+        // document.getElementById('update-name').addEventListener('click', function(){
+        //     const nameField = document.getElementById('name-field');
+        //     console.log(nameField);
+        // })
+
+
+    </script>
+</body>
+</html>
